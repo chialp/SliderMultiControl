@@ -1,0 +1,171 @@
+@font-face {
+    font-family: SpaceMono;
+    src: url("/fonts/SpaceMono-Regular.ttf");
+    
+}
+@font-face {
+    font-family: WorkSans;
+    src: url("fonts/WorkSans-Regular.ttf");
+  
+}
+body{
+    overflow-x: hidden;
+    background-color: #3b3b3b;
+    color: white;
+    font-family: WorkSans;
+
+}
+
+.slider{
+    position: absolute;
+    top: 50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    width:70vw;
+    height: 40rem;
+    display: flex;
+    flex-direction: column;
+    border-radius: 20px;
+    background-color: none;
+    background: none;
+    
+}
+.up{
+    position: absolute;
+    z-index: 1;
+    display: grid;
+    align-items: center;
+    grid-template-columns: 10% 20% 70%;
+    height: 80%;
+
+     
+
+}
+.textBox{
+    display: flex;
+    flex-direction: column;
+}
+.iconright {
+    display: flex;
+    justify-content: end;
+}
+.imgOne{
+     position: absolute;
+    z-index: -1;
+    top: 50%;
+    left: 50%;
+    opacity: 0.75;
+    width: 70vw;
+    height: 48rem;
+    border-radius: 20px;
+    margin-top: -24rem; /* نصب مارجین منفی برای تنظیم موقعیت عمودی */
+    margin-left: -35vw; /* نصب مارجین منفی برای تنظیم موقعیت افقی */
+    box-shadow: 5px 5px 15px 0px rgba(0, 0, 0, 0.75);
+
+}
+button{
+    width: 9rem;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+    font-family: WorkSans;
+    color: #3b3b3b;
+    height: 2.2rem;
+    background-color: #f9d342;
+}
+i{
+    cursor: pointer;
+    color: lightgrey;
+}
+i:hover{
+   color: #f9d342;
+}
+button:hover{
+    background-color: #3b3b3b;
+    color: #f9d342;
+}
+.down{
+    display: grid;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    height: 20%;
+    grid-template-columns: auto auto auto auto;
+    justify-content: center;
+    gap: 1rem;
+    align-items: center;
+    z-index: 1;
+}
+
+.downChild{
+    width: 6rem;
+    height: 5px;
+    z-index: -1;
+    border-radius: 15px;
+    background-color: white;
+    cursor: pointer;
+}
+
+    
+  
+  
+
+h1{
+    color: #f9d342;
+    font-weight: bold;
+}
+
+
+
+
+
+
+
+@keyframes imageChange {
+    0% {
+        opacity: 1;
+        transform: scale(1);
+    }
+    50% {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+#sliderImage {
+    animation: imageChange 1s ease-in-out;
+}
+
+/* تنظیمات انیمیشن */
+
+#prevButton,
+#nextButton {
+    cursor: pointer;
+}
+
+#prevButton:hover,
+#nextButton:hover {
+    animation: none;
+}
+@media(width<900px){
+    /* .textBox p{
+        display: none;
+    } */
+    .textBox h1{
+        font-size: 1rem;
+    }
+    .textBox{
+        margin-top: 12rem;
+    }
+    .up{
+        grid-template-columns: auto auto auto;
+    }
+    .downChild{
+        width: 3rem;
+        
+    }
+}
