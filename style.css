@@ -152,17 +152,17 @@ h1{
     animation: none;
 }
 @media(width<900px){
-    /* .textBox p{
+   /* .textBox p{
         display: none;
     } */
     .textBox h1{
         font-size: 1rem;
     }
-    .textBox p {
+    .textBox p , .textBox h1 {
    visibility:hidden;
    }
     .textBox{
-        margin-top: 12rem;
+        margin-top: 6rem;
     }
     .up{
         grid-template-columns: auto auto auto;
