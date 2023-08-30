@@ -18,11 +18,11 @@ body{
 
 .slider{
     position: absolute;
-    top: 50%;
+    top: 40%;
     left:50%;
     transform: translate(-50%,-50%);
     width:70vw;
-    height: 40rem;
+    height: 35rem;
     display: flex;
     flex-direction: column;
     border-radius: 20px;
@@ -36,13 +36,14 @@ body{
     display: grid;
     align-items: center;
     grid-template-columns: 10% 20% 70%;
-    height: 80%;
+    height: 90%;
 
      
 
 }
 .textBox{
     display: flex;
+    margin-top: 5rem;
     flex-direction: column;
 }
 .iconright {
@@ -52,13 +53,14 @@ body{
 .imgOne{
      position: absolute;
     z-index: -1;
-    top: 50%;
+    top: 0%;
+    margin-top: 3rem;
     left: 50%;
     opacity: 0.75;
     width: 70vw;
-    height: 48rem;
+    height: 35rem;
     border-radius: 20px;
-    margin-top: -24rem; /* نصب مارجین منفی برای تنظیم موقعیت عمودی */
+    /* margin-top: -24rem;  */
     margin-left: -35vw; /* نصب مارجین منفی برای تنظیم موقعیت افقی */
     box-shadow: 5px 5px 15px 0px rgba(0, 0, 0, 0.75);
 
@@ -152,13 +154,13 @@ h1{
     animation: none;
 }
 @media(width<900px){
-   /* .textBox p{
+    /* .textBox p{
         display: none;
     } */
     .textBox h1{
         font-size: 1rem;
     }
-    .textBox p , .textBox h1 {
+    .textBox p  {
    visibility:hidden;
    }
     .textBox{
