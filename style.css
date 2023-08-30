@@ -171,6 +171,7 @@ h1{
     }
     .downChild{
         width: 3rem;
+        margin-top: 2rem;
         
     }
 }
